@@ -4,20 +4,16 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #282c34;
-    color: white;
+    background-color: rgb(238, 231, 231);
     font-family: Arial, sans-serif;
 }
 
 .game-container {
-    text-align: center;
-}
-
-h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    color: #61dafb;
-    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .board {
@@ -28,21 +24,30 @@ h1 {
     margin-bottom: 20px;
 }
 
+#tic-tac-toe {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+}
+
 .cell {
     width: 100px;
     height: 100px;
+    background-color: #F8BA29;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2.5rem;
+    font-size: 2.5em;
     cursor: pointer;
-    background-color: #1e1e1e;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .cell:hover {
-    background-color: #3a3a3a;
+    background-color: #f3c762;
+    transform: scale(1.05);
 }
 
 .status {
@@ -50,22 +55,24 @@ h1 {
     margin-bottom: 20px;
 }
 
-.info{
-    font-size: 25px;
-    margin-bottom: 20px;
-    color: #61dafb;
-    text-transform: uppercase;
+#reset {
+    background-color: #F8BA29;
 }
 
-#reset {
-    padding: 15px 15px;
-    border-radius: 5px;
-    font-size: 1rem;
-    background-color: #1e1e1e;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
 #reset:hover {
-    background-color: #3a3a3a;
+    background-color: #f3c762;
+    transform: scale(1.05);
+}
+
+#reset:active {
+    background-color: #faaf00;
+}
+
+.fs {
+    font-size: 30px;
+}
+
+.leaderboard table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
 }
